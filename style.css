@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Finlandica&display=swap');
+*
+{
+    font-family: 'Finlandica', sans-serif;;
+}
 body
 {
     margin: 0;
@@ -11,4 +16,83 @@ body
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: lightgray;
+}
+#menu
+{
+    position: fixed;
+    margin: 20px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+}
+#bar
+{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.btn
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px dashed;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-color: whitesmoke;
+    transition: background-color, border-color 250ms ease-in-out;
+}
+.btn.active
+{
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: black;
+}
+#settings > img
+{
+    margin: 5%;
+}
+#import > img
+{
+    margin: 2%;
+}
+.content.active
+{
+    position: absolute;
+    top: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 200px;
+    visibility: visible;
+    opacity: 100%;
+}
+.content
+{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+    text-align: center;
+}
+.content > div > input
+{
+    padding: 10px;
+    border: none;
+    font-size: 1em;
+}
+.content > div > button
+{
+    padding: 10px;
+    border: none;
+    font-size: 1em;
+    background-color: darkgray;
+    transition: background-color 100ms ease-in-out;
+}
+.content > div > button:hover
+{
+    background-color: whitesmoke;
 }
